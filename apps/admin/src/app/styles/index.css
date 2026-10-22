@@ -1,0 +1,5 @@
+@import 'tailwindcss';
+@import '@asya/ui/styles/theme.css';
+
+/* Tailwind 4 не сканирует node_modules: явно указываем исходники ui-kit */
+@source '../../../../../packages/ui/src';

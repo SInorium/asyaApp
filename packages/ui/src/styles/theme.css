@@ -1,0 +1,46 @@
+/*
+ * Общие дизайн-токены для web и admin (Tailwind 4, CSS-first).
+ * Подключение в приложении:
+ *   @import 'tailwindcss';
+ *   @import '@asya/ui/styles/theme.css';
+ *   @source '../../../../packages/ui/src';
+ */
+@theme {
+  --color-background: oklch(0.985 0.006 85);
+  --color-foreground: oklch(0.22 0.01 60);
+  --color-card: oklch(1 0 0);
+  --color-muted: oklch(0.95 0.008 85);
+  --color-muted-foreground: oklch(0.52 0.015 60);
+  --color-border: oklch(0.9 0.01 85);
+  --color-input: oklch(0.88 0.01 85);
+  --color-ring: oklch(0.55 0.08 45);
+  --color-primary: oklch(0.32 0.03 45);
+  --color-primary-foreground: oklch(0.98 0.005 85);
+  --color-accent: oklch(0.62 0.12 45);
+  --color-accent-foreground: oklch(0.99 0 0);
+  --color-success: oklch(0.55 0.12 150);
+  --color-warning: oklch(0.7 0.14 75);
+  --color-destructive: oklch(0.55 0.2 27);
+  --color-destructive-foreground: oklch(0.99 0 0);
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+
+  --font-serif: var(--font-display, 'Georgia'), ui-serif, serif;
+  --font-sans: var(--font-body, ui-sans-serif), system-ui, sans-serif;
+}
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    border-color: var(--color-border);
+  }
+  body {
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}

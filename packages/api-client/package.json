@@ -1,0 +1,25 @@
+{
+  "name": "@asya/api-client",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    "./fetcher": "./src/fetcher.ts",
+    "./fetch": "./src/generated/fetch.ts",
+    "./query": "./src/generated/query.ts"
+  },
+  "scripts": {
+    "generate": "orval --config orval.config.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@asya/config": "workspace:*",
+    "@tanstack/react-query": "^5.104.5",
+    "@types/react": "^19.3.0",
+    "orval": "^8.44.0",
+    "react": "^19.3.1",
+    "typescript": "5.9.3"
+  },
+  "peerDependencies": {
+    "@tanstack/react-query": "^5.104.5"
+  }
+}

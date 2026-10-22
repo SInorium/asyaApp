@@ -1,0 +1,13 @@
+# Единый origin для разработки: http://localhost:8080
+# web (Next) :3000, admin (Vite) :5173, api (Nest) :4000 запущены на хосте через `pnpm dev`.
+:8080 {
+	handle /api/* {
+		reverse_proxy host.docker.internal:4000
+	}
+	handle /admin* {
+		reverse_proxy host.docker.internal:5173
+	}
+	handle {
+		reverse_proxy host.docker.internal:3000
+	}
+}

@@ -1,0 +1,4 @@
+@import 'tailwindcss';
+@import '@asya/ui/styles/theme.css';
+
+@source '../../../../../packages/ui/src';
